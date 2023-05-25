@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Data
+h-next/data/
+Improved Harmonic Networks
+
+# Idea
+.idea
+h-next/lightning_logs
+h-next/wandb
