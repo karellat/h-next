@@ -7,9 +7,12 @@
 conda env create -f environment.yml
 ``
 ## Training
-* See training CLI in [training.py](./h-next/training.py)
+* Training CLI in [training.py](./h-next/training.py)
+  * Specify ID of GPU by CUDA_VISIBLE_DEVICES
+  * To choose size of batch, data dir, for zero padding pad
+    * `--datamodule_hparams "{'batch_size': 63, 'data_dir' : '/tmp', 'pad':0}"`
+  * For more details see [training.py](./h-next/training.py) 
 * Parameters are optimized for [Wandb Sweeps](https://wandb.ai/site/sweeps), see examples in: [data/sweeps](./data/sweeps). 
-* Specify ID of GPU by CUDA_VISIBLE_DEVICES
 ### 0. Activate Conda Env
 ``` 
 conda activate h-next
