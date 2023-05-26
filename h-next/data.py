@@ -12,10 +12,11 @@ from torchvision.transforms import InterpolationMode
 from custom_datasets import MnistRotTestVisionDataset, Cifar10RotTestVisionDataset, RotatedMnistVisionDataset
 
 TEST_INVARIANCE_KEY = "test_90"
+DATA_DIR = "/tmp"
 
 class MnistRotTest(LightningDataModule, ABC):
     def __init__(self,
-                 data_dir: str = "./data",
+                 data_dir: str = DATA_DIR,
                  pad: int = 10,
                  batch_size: int = 32,
                  test_batch_size: int = 256,
@@ -145,7 +146,7 @@ class MnistRotTest(LightningDataModule, ABC):
 class Cifar10RotTest(LightningDataModule, ABC):
     # TODO: Merge with mnist-rot-test
     def __init__(self,
-                 data_dir: str = "./data",
+                 data_dir: str = DATA_DIR,
                  pad: int = 0,
                  batch_size: int = 32,
                  test_batch_size: int = 256,
@@ -248,7 +249,7 @@ class Cifar10RotTest(LightningDataModule, ABC):
 class RotatedMnist(LightningDataModule, ABC):
 
     def __init__(self,
-                 data_dir: str = "./data",
+                 data_dir: str = DATA_DIR,
                  pad: int = 10,
                  batch_size: int = 32,
                  test_batch_size: int = 256,
