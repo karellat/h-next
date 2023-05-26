@@ -2,6 +2,7 @@
 ## The next step towards roto-translation invariant networks
 ## Prerequisites
 * Install [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
+* Trained using RockyLinux and NVIDIA A100
 * Create conda environment 
 ``
 conda env create -f environment.yml
