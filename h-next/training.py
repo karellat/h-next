@@ -32,7 +32,7 @@ from upscalehnet import UpscaleHConv2d
 @click.option('--early_stopping', default=-1, type=int)
 @click.option('--wandb_offline', default=True, type=bool, is_flag=True)
 @click.option('--datamodule_name', default="mnist-rot-test", type=str)
-@click.option('--datamodule_hparams', default=dict(batch_size=64, data_dir='data', pad=0), type=ClickDictionaryType())
+@click.option('--datamodule_hparams', default=dict(batch_size=64, data_dir='/tmp', pad=0), type=ClickDictionaryType())
 @click.option('--optimizer_name', default="AdamW", type=str)
 @click.option('--optimizer_hparams', default=dict(lr=1e-3), type=ClickDictionaryType())
 @click.option('--backbone_name', default="HnetBackbone", type=str)
